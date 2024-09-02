@@ -1,0 +1,60 @@
+<div id="searchBody">
+  <div id="searchBar" class="pt-5">
+    <form id="selection">
+        <div id="countrySelect" class="form-group m-0">
+            <!-- <select class="form-control" (change)="onSelected(region)" id="exampleFormControlSelect1">
+                <option value='br1'>BR1</option>
+                <option value='eun1'>EUN1</option>
+                <option default value='euw1'>EUW1</option>
+                <option value='jp1'>JP1</option>
+                <option value='kr'>KR</option>
+                <option value='la1'>LA1</option>
+                <option value='la2'>LA2</option>
+                <option value='na1'>NA1</option>
+                <option value='oc1'>OC1</option>
+                <option value='ph2'>PH2</option>
+                <option value='ru'>RU</option>
+                <option value='sg2'>SG2</option>
+                <option value='th2'>TH2</option>
+                <option value='tr1'>TR1</option>
+                <option value='tw2'>TW2</option>
+                <option value='vn2'>VN2</option>
+            </select> -->
+            <input type="text" [(ngModel)]="region" name="search" placeholder="Region">
+        </div>
+        <div id="summonerSelect">
+            <input id="summonerSelect" type="text" [(ngModel)]="invocateurname" name="search" placeholder="Invocateur Name">
+        </div>
+    </form>
+    <div id="buttonSearch">
+        <input type="button" (click)="chargerDonnees();chargerDonnees2()" value="Search the summoner" />
+    </div>
+
+  </div>
+  <div *ngIf="this.search NOT NULL" id="rankCard" class="card text-center container mt-5 p-0">
+    <div class="card-header">
+        <h2></h2> <!-- name -->
+        <h5><b>{{this.search.summonerLevel}}</b></h5> <!-- summonerLevel -->
+    </div>
+    <div id="infoSummoner" class="card-body row">
+        <div class="col-1">
+        </div>
+        <div class="col-4"> <!-- Pour les RANKED_SOLO_5x5 -->
+            <h4>Ranked Solo</h4>
+            <p>{{this.stat[0].tier}} {{this.stat[0].rank}}</p> <!-- tier rank -->
+        </div>
+        <div class="col-2">
+        </div>
+        <div class="col-4"> <!-- Pour les RANKED_FLEX_SR -->
+            <h4>Ranked Flex</h4>
+            <p>{{this.stat[1].tier}} {{this.stat[1].rank}}</p> <!-- tier rank -->
+        </div>
+        <div class="col-1">
+        </div>
+
+    </div>
+    <div class="card-footer text-muted">
+        <a routerLink="/summoner" class="btn btn-primary">Profile</a>
+    </div>
+  </div>
+</div>

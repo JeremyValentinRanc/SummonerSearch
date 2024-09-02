@@ -1,0 +1,10 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+* {
+  font-family: Roboto, Helvetica, sans-serif;
+  color: #434242;
+}
+
+body {
+  background-color: #F3EFE0;
+}

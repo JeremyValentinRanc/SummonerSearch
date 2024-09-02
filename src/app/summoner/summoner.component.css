@@ -1,0 +1,22 @@
+
+body {
+  background-color: #F3EFE0;
+  color: #434242;
+}
+
+#infoSummoner {
+  background-color: #F3EFE0;
+  color: #434242;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#infoSummoner img{
+  width: 80%;
+}
+
+#rankCard {
+  background-color: #22A39F;
+  color: #222222;
+  border: 4px solid #22A39F;
+}
